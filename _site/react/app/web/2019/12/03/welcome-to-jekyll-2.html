@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>React - CSS w JS</title></head>
+<body>
+	<main class="container">
+		<section class="about">
+			<img src="/assets/portfolio.png" alt="">
+			<h2></h2>
+			<p class="tagline"></p>
+			<ul class="social">
+				<a href="https://github.com/"><li><i class="icon-github-circled"></i></li></a>
+				<a href="https://linkedin.com/"><li><i class="icon-linkedin-squared"></i></li></a>
+				<a href="https://twitter.com/"><li><i class="icon-twitter-squared"></i></li></a>
+			</ul>
+			<p>&copy; 2019</p>
+		</section>
+		<section class="content">
+			<div class="post-container">
+<a class="post-link" href="/react/app/web/2019/12/03/welcome-to-jekyll-2.html">
+	<h2 class="post-title">React - CSS w JS</h2>
+</a>
+<div class="post-meta">
+	<ul class="post-categories"><li>react</li><li>app</li><li>web</li></ul>
+	<div class="post-date"><i class="icon-calendar"></i>Dec 3, 2019</div>
+</div>
+<div class="post">
+	<p>Zdałem sobie sprawę żę warto opisać kilka prostych sposobów dołączania stylów CSS w reactie. Piszę to głównie żeby nie zapomnieć, jako że znalezienie odpowiednich informacji w Dokumentacji Reacta jest strasznie kłopotliwa. No to zaczynamy, wpis będzie krótki.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var style = {
+  backgroundColor: "white",
+  borderTop: "1px solid #E7E7E7",
+  textAlign: "center",
+  padding: "20px",
+  position: "relative",
+  left: "0",
+  bottom: "0",
+  height: "10%",
+  width: "100%",
+  paddingTop: "30vh",
+};
+</code></pre></div></div>
+
+<p>Natomiast samo przypisanie zmiennej do komponentu, odbywa się poprzez atrybut elementu style. W sposób poniżej:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;footer style={style } className="gradient"&gt;
+</code></pre></div></div>
+
+<p>Analogicznie jednak nadal możliwe jest dodanie zwykłej klasy do elementu poprzez className (to jednak React class tutaj jest zarezerwowanym słowem kluczowym). Wykonanie importu w wersji skróconej:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Import './Footer.css';
+</code></pre></div></div>
+
+<p>Inny sposób bierze pod uwagę inline styles, czyli tak jak poprzednio w miejsce “style” wrzuca się javascriptowe wersje identyfikatorów CSS-a.</p>
+
+<p>To by było na tyle.</p>
+
+</div>
+		</section>
+	</main></body>
+</html>

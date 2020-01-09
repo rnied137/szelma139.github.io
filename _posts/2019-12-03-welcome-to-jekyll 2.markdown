@@ -1,29 +1,40 @@
 ---
+title: React - CSS w JS
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2019-12-03 17:27:00 +0100
-categories: jekyll update
+date: '2019-12-03 17:27:00 +0100'
+categories: react app web
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+Zdałem sobie sprawę żę warto opisać kilka prostych sposobów dołączania stylów CSS w reactie. Piszę to głównie żeby nie zapomnieć, jako że znalezienie odpowiednich informacji w Dokumentacji Reacta jest strasznie kłopotliwa. No to zaczynamy, wpis będzie krótki.
 
-`YEAR-MONTH-DAY-title.MARKUP`
+```
+var style = {
+  backgroundColor: "white",
+  borderTop: "1px solid #E7E7E7",
+  textAlign: "center",
+  padding: "20px",
+  position: "relative",
+  left: "0",
+  bottom: "0",
+  height: "10%",
+  width: "100%",
+  paddingTop: "30vh",
+};
+```
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Natomiast samo przypisanie zmiennej do komponentu, odbywa się poprzez atrybut elementu style. W sposób poniżej:
 
-Jekyll also offers powerful support for code snippets:
+```
+ <footer style={style } className="gradient">
+```
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Analogicznie jednak nadal możliwe jest dodanie zwykłej klasy do elementu poprzez className (to jednak React class tutaj jest zarezerwowanym słowem kluczowym). Wykonanie importu w wersji skróconej:
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+```
+Import './Footer.css';
+```
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+
+Inny sposób bierze pod uwagę inline styles, czyli tak jak poprzednio w miejsce "style" wrzuca się javascriptowe wersje identyfikatorów CSS-a.
+
+To by było na tyle.
