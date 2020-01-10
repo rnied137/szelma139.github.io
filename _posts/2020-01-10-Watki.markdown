@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ---
 title: Wątki w c++ i w QT
