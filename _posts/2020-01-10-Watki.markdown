@@ -2,10 +2,10 @@
 published: true
 ---
 ---
-title: Wątki w c++ i w QT
+title: Watki w c++ i w QT
 layout: post
 date: '2019-01-10 17:27:00 +0100'
-categories: c++ wątki QT
+categories: c thread QT
 ---
 
 Dobrze jest mieć gdzieś podgląd na to w jaki sposób prawidłowo dodawać wątki w c++ i w QT. Pod spodem w jaki sposób to zrobić PRAWIDŁOWO..
