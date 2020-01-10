@@ -1,7 +1,4 @@
 ---
-published: true
----
----
 title: Watki w c++ i w QT
 layout: post
 date: '2019-01-10 17:27:00 +0100'
