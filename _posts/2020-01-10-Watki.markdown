@@ -28,5 +28,4 @@ thread.start();
 Wpis zaczerpnięty od Youtube  - VoidRealms, ponieważ szukanie po raz n-ty tego filmika mi się już znudziło. 
 
 
-
 To by było na tyle.
