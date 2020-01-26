@@ -13,22 +13,19 @@ Definiowanie stanu dla gdy funkcja zawiera wskaznik na event:
 handleChange = (e) => {
  
     this.setState({
-        currentData: e.target.value
-        
+        currentData: e.target.value        
     });
 ```
 
 Mapowanie po elementach danej listy. Tutaj item jest po prostu jednym elementem z listy i przybiera jego wartosci tak jak np. w przypadku foreach element in elements.
 
-`{this.state.list.map((item) => {
+```
+{this.state.list.map((item) => {
     return (
-<div> <ToDo text={item.content} random={colors[Math.floor(Math.random() * colors.length)]}/> </div>
-    )
-
-}
-
-)}`
-
+<div> <ToDo text={item.content} random={colors[Math.floor(Math.random() * colors.length)]}/> </div>   )
+ }
+)}
+```
 Random ktory tam jest tez sie moze przydać. Zapamiętać.
 
 Analogicznie w mega intuicyjny (i nieczysty) sposob definiowanie tablica obiektow z nowym obiektem - musi przybierac pole obiektu takie samo jakie jest w tablicy obiektow starej. Co za chwilke wytlumaczę: 
