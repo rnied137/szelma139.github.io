@@ -36,7 +36,7 @@ submitData = (e) =>
     e.preventDefault();
     let newObject = {}
     newObject.content=this.state.currentData;
-    let newArray = [...this.state.list, newObject]
+    let newArray = [...this.state.list, newObject]  //wrzuc do nowej tablicy starą listę (...this) i dorzuc tam nowy obiekt
     this.setState(prevState => ({
         list: newArray,
         currentData: '',
@@ -45,7 +45,6 @@ submitData = (e) =>
     }))
 
     console.log("Nowa lista to " + this.state.list);
-
 }
 ```
 
