@@ -1,7 +1,7 @@
 ---
 title: React jeszcze raz tym razem porzadnie.. [komend]
 layout: post
-date: '2019-12-03 17:27:00 +0100'
+date: '2020-01-26 21:53:00 +0100'
 categories: react
 ---
 
