@@ -17,7 +17,7 @@ handleChange = (e) => {
     });
 ```
 
-Mapowanie po elementach danej listy. Tutaj item jest po prostu jednym elementem z listy i przybiera jego wartosci tak jak np. w przypadku foreach element in elements.
+Mapowanie po elementach danej listy. Tutaj item jest po prostu jednym elementem z listy i przybiera jego wartosci tak jak np. w przypadku foreach element in *element**s**.
 
 ```
 {this.state.list.map((item) => {
