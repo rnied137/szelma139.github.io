@@ -5,10 +5,6 @@ date: '2020-01-26 10:55:00 +0100'
 categories: C# Delegaci Wątki
 ---
 
-
-
-
-
 Trzeci parametr funkcji poniżej to callback.
 
 ```
@@ -42,7 +38,5 @@ funkcje void bez parametrów, którym jest **delegate** i to właśnie w nim zde
                    progressBar1.Maximum = (int)file.Attributes.Size; });
   ```
   
- 
-                        //delegate {..} funkcja anonimowa czyli to co po delegate to jest ta funkcja wykonywana w watku i atrybut ktory ustawia
-                        //musi byc zgodny z tym co w invoke
+No to byłoby  na tyle..
 
