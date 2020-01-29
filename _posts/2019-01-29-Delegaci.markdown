@@ -1,0 +1,48 @@
+---
+title: Delegaci C# [komend]
+layout: post
+date: '2020-01-26 10:55:00 +0100'
+categories: C# Delegaci Wątki
+---
+
+
+
+
+
+Trzeci parametr funkcji poniżej to callback.
+
+```
+  client.DownloadFile(file.FullName, fileStream, DownloadProgresBar);
+
+```
+
+Jej składnia wygląda tak:
+
+```
+  public void DownloadFile(string path, Stream output, Action<ulong> downloadCallback = null);
+```
+
+
+A tutaj jak wygląda przekazywany callback, który zawiera się w **DownloadProegressBar**
+```
+ private void DownloadProgresBar(ulong uploaded)
+        {
+            // Update progress bar on foreground thread
+            progressBar1.Invoke((MethodInvoker)delegate { progressBar1.Value = (int)uploaded; });
+        }
+```
+
+Każdy element interfejsu GUI wykonuję się w watku głównym, jednak pobieranie plików wykonuje sie w wątku dodatkowym po to aby nie blokować okna.
+Dlatego progressBar ma metodę **Invoke**, która umożliwia zdefiniowanie delegata poprzez Method Invokera. Sam **Method Invoker** przyjmuje
+funkcje void bez parametrów, którym jest **delegate** i to właśnie w nim zdefiniowana jest funkcja anonimowa - bo nie musi przyjmować wartości.
+
+```
+                   progressBar1.Invoke(
+               (MethodInvoker)delegate {
+                   progressBar1.Maximum = (int)file.Attributes.Size; });
+  ```
+  
+ 
+                        //delegate {..} funkcja anonimowa czyli to co po delegate to jest ta funkcja wykonywana w watku i atrybut ktory ustawia
+                        //musi byc zgodny z tym co w invoke
+
