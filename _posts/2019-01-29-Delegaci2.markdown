@@ -1,0 +1,39 @@
+---
+title: Delegaci po raz kolejny
+layout: post
+date: '2020-01-26 14:01:00 +0100'
+categories: C# Delegaci .NET
+---
+
+Teraz Delegaci tylko inaczej. No to zaczynamy:
+
+
+
+Definiowanie stanu dla gdy funkcja zawiera wskaznik na event:
+
+```
+ private delegate void delSetProgress(ulong val);
+        delSetProgress mydel;
+        private void DownloadProgresBar(ulong uploaded)
+        {
+            // Update progress bar on foreground thread
+            
+            mydel = setVal;
+            progressBar1.Invoke(mydel,uploaded);
+
+        }
+```
+
+Ewenutalnie to samo tylko w prostszej i szybszej wersji:
+          
+          `progressBar1.Invoke((MethodInvoker)delegate { progressBar1.Value = (int)uploaded; });`
+
+
+Prototyp funkcji:
+```
+ void setVal(ulong val)
+        {
+            progressBar1.Value = (int)val;
+
+        }
+```
