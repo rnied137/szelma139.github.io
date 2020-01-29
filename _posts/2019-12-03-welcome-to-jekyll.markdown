@@ -1,5 +1,5 @@
 ---
-title: Jekyll i kilka ważnych ważności.. [komend]
+title: Jekyll i kilka ważnych ważności..
 layout: post
 date: '2019-12-03 17:27:00 +0100'
 categories: jekyll update commands
