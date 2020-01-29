@@ -1,5 +1,5 @@
 ---
-title: Delegaci C# [komend]
+title: Delegaci C#
 layout: post
 date: '2020-01-26 10:55:00 +0100'
 categories: C# Delegaci Wątki
