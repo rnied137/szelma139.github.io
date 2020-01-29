@@ -1,5 +1,5 @@
 ---
-title: React jeszcze raz tym razem porzadnie.. [komend]
+title: React jeszcze raz tym razem porzadnie..
 layout: post
 date: '2020-01-26 21:53:00 +0100'
 categories: react
