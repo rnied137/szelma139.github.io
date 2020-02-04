@@ -5,7 +5,7 @@ date: '2019-12-03 17:27:00 +0100'
 categories: js javascript app web
 ---
 
-Wywołania query selectorów z drzewa DOM dla HTML z poziomu javascripta.
+Wywołania query selectorów z drzewa DOM dla HTML z poziomu javascripta. 
 
 
 Standardowe wybranie lementu w js wygląda tak:
@@ -13,6 +13,7 @@ Standardowe wybranie lementu w js wygląda tak:
 `let changer = document.querySelector(".changer");
 const body = document.querySelector("body");`
 
+Oczywisice mozna równiez użyc getElementById czy getElementByClassName;
 ```
 const colorValues = [
   "A", "B","C", "D", "E","F","1","2", "3","4", "5", "6","7", "8","9", "0];
