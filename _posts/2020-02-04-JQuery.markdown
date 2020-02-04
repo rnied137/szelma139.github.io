@@ -1,11 +1,11 @@
 ---
-title: JQUERY czy po co i jak Panie kochany ?
+title: JQUERY czyli jak i po co ?
 layout: post
 date: '2020-02-04 18:22:00 +0100'
 categories: js javascript app query
 ---
 
-Jquery - bibliotkea javascriptowa, która ułatwia wykorzystywanie selectorów. Jak to działa ? Czas się przyjrzeć.
+Jquery - bibliotkea javascriptowa, która ułatwia wykorzystywanie selectorów. Skoro można łatwiej to po co się męczyć? No dobra ale jak to działa ? Czas się przyjrzeć.
 
 
 Normalne wybranie elementu po selectorze wygląda tak w czystym html:
