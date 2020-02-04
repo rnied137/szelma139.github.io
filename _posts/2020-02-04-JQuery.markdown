@@ -1,0 +1,38 @@
+---
+title: JQUERY czy po co i jak Panie kochany ?
+layout: post
+date: '2020-02-04 18:22:00 +0100'
+categories: js javascript app query
+---
+
+Jquery - bibliotkea javascriptowa, która ułatwia wykorzystywanie selectorów. Jak działa ? Czas się przyjrzeć.
+
+
+Normalne wybranie elementu po selectorze wygląda tak w czystym html:
+`let changer = document.querySelector(".changer");
+
+Przykład uchwytu jednak tym razem w jquery:
+uchwyt - >  `$(element)`
+gdzie element to np. 
+`".class"`
+`"#id"`
+`"h1"`
+
+Pełna składnia więc może wyglądać tak:
+
+```
+`$('a')` - wybiera wszystkie linki ze strony.
+`$('.radek')` - wybiera wszystkie selectory z klasą radek.
+`$(document)` - wybiera cale okno, tak też można 
+```
+
+Podpinać elementy do uchwytu można poprzez **html** oraz **css**. Pierwsze zmienia parametry zawartości selektora,
+drugi tak jak nazwa jego stylu czyli cssa. Istotnie mogą one ustawiać wartość parametru ale też pełnić rolę settera. Więc jest to 
+getter oraz setter. Jest to czysta analogia do starego sposobu czyli - **innerhtml**.
+
+` var obraz = "url(img/" + cards[nr] + " + ");` -- parametr cards to tablica nazwych plików.
+`$('#c0').css('background-image, obraz);` -- parametr background-image ustaw na obraz (obraz jest stringiem)
+`var opacity = $('#c').css('opacity')` - getter
+`var opacity = $('#c').css('opacity', '0.8')` - setter
+
+To by było na tyle.
