@@ -5,11 +5,11 @@ date: '2020-02-04 18:22:00 +0100'
 categories: js javascript app query
 ---
 
-Jquery - bibliotkea javascriptowa, która ułatwia wykorzystywanie selectorów. Jak działa ? Czas się przyjrzeć.
+Jquery - bibliotkea javascriptowa, która ułatwia wykorzystywanie selectorów. Jak to działa ? Czas się przyjrzeć.
 
 
 Normalne wybranie elementu po selectorze wygląda tak w czystym html:
-`let changer = document.querySelector(".changer");
+`let changer = document.querySelector(".changer");`
 
 Przykład uchwytu jednak tym razem w jquery:
 uchwyt - >  `$(element)`
@@ -21,9 +21,9 @@ gdzie element to np.
 Pełna składnia więc może wyglądać tak:
 
 ```
-`$('a')` - wybiera wszystkie linki ze strony.
-`$('.radek')` - wybiera wszystkie selectory z klasą radek.
-`$(document)` - wybiera cale okno, tak też można 
+$('a') - wybiera wszystkie linki ze strony.
+$('.radek') - wybiera wszystkie selectory z klasą radek.
+$(document) - wybiera cale okno, tak też można 
 ```
 
 Podpinać elementy do uchwytu można poprzez **html** oraz **css**. Pierwsze zmienia parametry zawartości selektora,
