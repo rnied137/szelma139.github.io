@@ -9,11 +9,18 @@ Jako że wygląda na to że w c++ bardzo przydzadzą się wskaźniki - szczegól
 Istnieją 4 rodzaje castowania (rzutowania) i istnieje sposób znany z c. Ten drugi a więc sposób z c to:
 `(double)zmienna` - Wykonuje castowanie zmiennej na typ double.
 
- Jednak istnieją też trzy ważne inne sposoby:
-`reinterpret_cast` - konwersja wskaznika jednego typu na inny wskaznik
-`QMouseEvent * e = reinterpret_cast<QEvent*>(event) - tutaj event byl typu **QEvent** i zostaje skonwertowany do **QMouseEvent**
-`const_cast` - stała do zmiennej
-`static_cast`- jeden typ do innego ale obsluguje głównie typy proste.
+ Jednak istnieją też trzy ważne inne sposoby:  
+ 
+  
+`reinterpret_cast` - konwersja wskaznika jednego typu na inny wskaznik 
+
+ 
+`QMouseEvent * e = reinterpret_cast<QEvent*>(event) - tutaj event byl typu **QEvent** i zostaje skonwertowany do **QMouseEvent**  
+
+`const_cast` - stała do zmiennej  
+
+`static_cast`- jeden typ do innego ale obsluguje głównie typy proste.  
+
 
 
 No a tutaj tak właściwie dla siebie kod, rozpoznający obsługę myszy dla vnc w QT.
