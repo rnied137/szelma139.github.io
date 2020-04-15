@@ -1,7 +1,7 @@
 ---
 title: Bash - podstawy
 layout: post
-date: '2020-15-04 12:10:00 +0100'
+date: '2020-04-15 12:10:00 +0100'
 categories: bash linux app 
 ---
 
