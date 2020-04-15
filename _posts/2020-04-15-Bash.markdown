@@ -1,0 +1,48 @@
+---
+title: Bash - podstawy
+layout: post
+date: '2020-15-04 12:10:00 +0100'
+categories: bash linux app 
+---
+
+Postanowiłem sobie napisac a właściwie po dużej część skopiować z internetu skrypt automatyzujacy systemd. 
+Wygląda on mniej więcej tak:
+`
+/opt/aplikacja/ClientQt.sh
+`
+
+```
+#!/bin/bash
+unset QT_PLUGIN_PATH
+appname=$(basename "$0" .sh)
+dirname=$(dirname "$0")
+cd "$dirname/bin"
+export Ld_LIBRARY_PATH=`pwd`
+./$appname "$@"
+
+
+```
+
+```
+appname=($basename "$0" .sh)  - wez nazwe pliku sh i usun koncowke sh.
+```
+
+
+```
+dirname = $(dirname "$0") 
+
+rownolezne dirname /opt/aplikacja/  
+```
+
+```
+export Ld_LIBRARY_PATH=`pwd` - eksport bibliotek z aktualnego katalogu czyli dirname/bin -> /opt/aplikacja/bin/
+
+```
+
+A to właśnie w bin jest binarna/wykonywalna wersja programu, ktory wymaga bibliotek ktore eksportuje export Ld.
+```
+"$@" - wywołaj z parametrami
+```
+
+
+To by było na tyle.
