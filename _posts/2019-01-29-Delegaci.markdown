@@ -40,5 +40,5 @@ funkcje void bez parametrów, którym jest **delegate** i to właśnie w nim zde
                    progressBar1.Maximum = (int)file.Attributes.Size; });
   ```
   
-No to byłoby  na tyle..
+No to byłoby  na tyle.
 
