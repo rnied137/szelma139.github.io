@@ -27,7 +27,7 @@ Definiowanie i co ciekawe zwracanie pustego setu(pary).
     const auto tic(chrono::steady_clock::now());
 
     if (!(std::cin >> s)) { //returns empty pair of type string and double
-        return {{},{}};
+        return {};
     }
 }
 ```
