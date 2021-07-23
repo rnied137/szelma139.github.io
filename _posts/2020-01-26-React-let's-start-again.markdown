@@ -1,14 +1,11 @@
 ---
-title: React jeszcze raz tym razem porzadnie..
+title: React once again this time - cheatsheet
 layout: post
 date: '2020-01-26 21:53:00 +0100'
 categories: react
 ---
 
-Postanowilem sie wreszcie nauczyc czegos w porzadny sposob. No to maly skrot tutaj:
-
-
-Definiowanie stanu dla gdy funkcja zawiera wskaznik na event:
+Defining state where function has pointer for event:
 ```
 handleChange = (e) => {
  
@@ -17,7 +14,7 @@ handleChange = (e) => {
     });
 ```
 
-Mapowanie po elementach danej listy. Tutaj item jest po prostu jednym elementem z listy i przybiera jego wartosci tak jak np. w przypadku foreach element in *element**s**.
+Mapping by elements of array, really standard stuff. Item is one element of array, same as used normally in foreach - well know in different languages. foreach element in *element**s**.
 
 ```
 {this.state.list.map((item) => {
@@ -26,9 +23,9 @@ Mapowanie po elementach danej listy. Tutaj item jest po prostu jednym elementem 
  }
 )}
 ```
-Random ktory tam jest tez sie moze przydać. Zapamiętać.
+Yes random being up there can also be often found in different database, or even yt.
 
-Analogicznie w mega intuicyjny (i nieczysty) sposob definiowanie tablica obiektow z nowym obiektem - musi przybierac pole obiektu takie samo jakie jest w tablicy obiektow starej. Co za chwilke wytlumaczę: 
+Similarly in not really intuitive way, defining array of objects, and applying new object to it. It is well known spread object which can be used on iterables. 
 
 ```
 submitData = (e) => 
@@ -48,5 +45,6 @@ submitData = (e) =>
 }
 ```
 
-Tablica obiektow `this.state { list: [{content:"some text}, {content:"sample other text")];` W tym przypadku nowy obiekt musi rowniez posiadac wlasciwosc content inaczej nie bedzie prawidlowo przekazany do nowej tablicy. Tak jak wyzej zrobilem dodająć:
+Array of objects `this.state { list: [{content:"some text}, {content:"sample other text")];` 
+In this case object have property otherwise won't be passed to new array. 
 `list:newArray`. No to byloby na tyle.
