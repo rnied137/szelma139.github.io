@@ -5,10 +5,11 @@ date: '2020-04-15 12:10:00 +0100'
 categories: bash linux app 
 ---
 
-Postanowiłem sobie napisac a właściwie po dużej część skopiować z internetu skrypt automatyzujacy systemd. 
-Wygląda on mniej więcej tak:
+So I decided to write (more like a copy cat) some stuff acout automating systemd. 
+So it might look like this:
+
 `
-/opt/aplikacja/ClientQt.sh
+/opt/app/ClientQt.sh
 `
 
 ```
@@ -24,25 +25,25 @@ export Ld_LIBRARY_PATH=`pwd`
 ```
 
 ```
-appname=($basename "$0" .sh)  - wez nazwe pliku sh i usun koncowke sh.
+appname=($basename "$0" .sh)  - take appname and delete extension.
 ```
 
 
 ```
 dirname = $(dirname "$0") 
 
-rownolezne dirname /opt/aplikacja/  
+same as: dirname /opt/aplikacja/  
 ```
 
 ```
-export Ld_LIBRARY_PATH=`pwd` - eksport bibliotek z aktualnego katalogu czyli dirname/bin -> /opt/aplikacja/bin/
+export Ld_LIBRARY_PATH=`pwd` - export library from current work tree, in this case dirname/bin -> /opt/app/bin/
 
 ```
 
-A to właśnie w bin jest binarna/wykonywalna wersja programu, ktory wymaga bibliotek ktore eksportuje export Ld.
+And bin is binary/execuatable version of program, one expecting libraries to work, ld is taking care of it.
 ```
-"$@" - wywołaj z parametrami
+"$@" - call with parameters.
 ```
 
 
-To by było na tyle.
+See ya'll.
