@@ -47,4 +47,6 @@ submitData = (e) =>
 
 Array of objects `this.state { list: [{content:"some text}, {content:"sample other text")];` 
 In this case object have property otherwise won't be passed to new array. 
-`list:newArray`. No to byloby na tyle.
+`list:newArray`. 
+
+See ya'll.
