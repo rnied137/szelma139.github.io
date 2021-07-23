@@ -1,5 +1,5 @@
 ---
-title: Bash - podstawy
+title: Bash - basics
 layout: post
 date: '2020-04-15 12:10:00 +0100'
 categories: bash linux app 
