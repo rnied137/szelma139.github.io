@@ -5,7 +5,7 @@ date: '2020-04-15 12:10:00 +0100'
 categories: bash linux app 
 ---
 
-So I decided to write (more like a copy cat) some stuff acout automating systemd. 
+So I decided to write (more like a copy cat) some stuff about automating systemd. 
 So it might look like this:
 
 `
