@@ -1,16 +1,11 @@
 ---
-title: Delegaci po raz kolejny
+title: Delegates but even weirder this time
 layout: post
 date: '2020-01-26 14:01:00 +0100'
-categories: C# Delegaci .NET
+categories: C# Delegates .NET
 ---
 
-Teraz Delegaci tylko inaczej. No to zaczynamy:
-
-
-
-Definiowanie stanu dla gdy funkcja zawiera wskaznik na event:
-
+Defining state where function contains pointer to event.
 ```
  private delegate void delSetProgress(ulong val);
         delSetProgress mydel;
@@ -24,12 +19,12 @@ Definiowanie stanu dla gdy funkcja zawiera wskaznik na event:
         }
 ```
 
-Ewenutalnie to samo tylko w prostszej i szybszej wersji:
+Same stuff but with shorter syntax - and simpler..
           
           `progressBar1.Invoke((MethodInvoker)delegate { progressBar1.Value = (int)uploaded; });`
 
 
-Prototyp funkcji:
+Function prototype.
 ```
  void setVal(ulong val)
         {
