@@ -1,8 +1,8 @@
 ---
-title: Delegaci C#
+title: Delegates in C#
 layout: post
 date: '2020-01-26 10:55:00 +0100'
-categories: C# Delegaci Wątki
+categories: C# Delegates Threads
 ---
 
 Wpis o delegatach w C# jako że dla mnie to nowość. Same delegaty przydają sie głównie przy Callbackach, w przeciwnym wypadku to tylko wskaźnik na funkcje jak w C++. No to jedziemy:
