@@ -1,10 +1,11 @@
 ---
-title: React - CSS w JS
+title: React - CSS in JS
 layout: post
 date: '2019-12-03 17:27:00 +0100'
 categories: react app web
 ---
 
+No, this post won't be about styled-components, or emotion, really basic stuff.
 So I've realised that it might be worth to explain few easy way of adding css in react. I am writing this mainly for myself, whole blog is one big cheatsheet, palce where it's easier to find how something is done. 
 React documentation even if quite clean is quite troublesome with navigation. This time really short post.
 
