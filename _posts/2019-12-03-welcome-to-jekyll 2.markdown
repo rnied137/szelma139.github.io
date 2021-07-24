@@ -5,7 +5,8 @@ date: '2019-12-03 17:27:00 +0100'
 categories: react app web
 ---
 
-Zdałem sobie sprawę żę warto opisać kilka prostych sposobów dołączania stylów CSS w reactie. Piszę to głównie żeby nie zapomnieć, jako że znalezienie odpowiednich informacji w Dokumentacji Reacta jest strasznie kłopotliwa. No to zaczynamy, wpis będzie krótki.
+So I've realised that it might be worth to explain few easy way of adding css in react. I am writing this mainly for myself, whole blog is one big cheatsheet, palce where it's easier to find how something is done. 
+React documentation even if quite clean is quite troublesome with navigation. This time really short post.
 
 ```
 var style = {
@@ -22,19 +23,16 @@ var style = {
 };
 ```
 
-Natomiast samo przypisanie zmiennej do komponentu, odbywa się poprzez atrybut elementu style. W sposób poniżej:
+Object few lines above is passed to style. And later on it is transpiled to string. It is worth to remember, this time it is already destructured.
 
 ```
  <footer style={style } className="gradient">
 ```
 
-Analogicznie jednak nadal możliwe jest dodanie zwykłej klasy do elementu poprzez className (to jednak React class tutaj jest zarezerwowanym słowem kluczowym). Wykonanie importu w wersji skróconej:
+Nowadays I am not using normal css files, but I tend to forget how to import simple css file. Most likely because too much usage of styled-components, basics go back to this dark place.
 
 ```
 Import './Footer.css';
 ```
 
-
-Inny sposób bierze pod uwagę inline styles, czyli tak jak poprzednio w miejsce "style" wrzuca się javascriptowe wersje identyfikatorów CSS-a.
-
-To by było na tyle.
+See y'all.
