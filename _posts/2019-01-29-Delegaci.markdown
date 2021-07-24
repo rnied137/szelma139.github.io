@@ -7,21 +7,23 @@ categories: C# Delegaci Wątki
 
 Wpis o delegatach w C# jako że dla mnie to nowość. Same delegaty przydają sie głównie przy Callbackach, w przeciwnym wypadku to tylko wskaźnik na funkcje jak w C++. No to jedziemy:
 
-Trzeci parametr funkcji poniżej to callback.
+Because delegates are quite a new thing for me, and also C# let's try how it works. Delegate are mostly used with callbacks, in reality it is same stuff as function pointers in c++. So let's ride:
+
+Third parameter is a callback.
 
 ```
   client.DownloadFile(file.FullName, fileStream, DownloadProgresBar);
 
 ```
 
-Jej składnia wygląda tak:
+And that's how it looks like:
 
 ```
   public void DownloadFile(string path, Stream output, Action<ulong> downloadCallback = null);
 ```
 
 
-A tutaj jak wygląda przekazywany callback, który zawiera się w **DownloadProegressBar**
+And that's this passed callback. **DownloadProegressBar**
 ```
  private void DownloadProgresBar(ulong uploaded)
         {
@@ -30,9 +32,9 @@ A tutaj jak wygląda przekazywany callback, który zawiera się w **DownloadProe
         }
 ```
 
-Każdy element interfejsu GUI wykonuję się w watku głównym, jednak pobieranie plików wykonuje sie w wątku dodatkowym po to aby nie blokować okna.
-Dlatego progressBar ma metodę **Invoke**, która umożliwia zdefiniowanie delegata poprzez Method Invokera. Sam **Method Invoker** przyjmuje
-funkcje void bez parametrów, którym jest **delegate** i to właśnie w nim zdefiniowana jest funkcja anonimowa - bo nie musi przyjmować wartości.
+Every element of interface (GUI) is executed in main thread but downloading files is executed in different thread so user interface is not blocked, especially when some heavy stuff is being processed by the processor. Sadly computer can do only one thing at a time -  that's not entirely true.
+
+ProgressBar has Invoke method, which let's use define delegate by Method Invoker. **Method Invoker** is using void method without parameters (**delegate**) and that's where anonymous function is defined - it doesn't need value.
 
 ```
                    progressBar1.Invoke(
@@ -40,5 +42,5 @@ funkcje void bez parametrów, którym jest **delegate** i to właśnie w nim zde
                    progressBar1.Maximum = (int)file.Attributes.Size; });
   ```
   
-No to byłoby  na tyle.
+See y'all.
 
