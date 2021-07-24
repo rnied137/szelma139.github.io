@@ -1,5 +1,5 @@
 ---
-title: Jekyll i kilka ważnych ważności..
+title: Jekyll and some important stuff..
 layout: post
 date: '2019-12-03 17:27:00 +0100'
 categories: jekyll update commands
@@ -7,18 +7,20 @@ categories: jekyll update commands
 
 Dobrze jest mieć gdzieś pod ręką konkretną konfigurację dla jekylla, więc może na samym serwisie blogowym byłoby jej najlepsze miejsce, w końcu wtedy nie trzeba szukać prawda? No to poniżej kilka ważnych elementów.
 
+It is worth to have configuration of jekyll, best place would be blog itself, so I don't really need to seach in several different places, right ?
+So few important details about all this ruby-jekyll blogging.
 
-Aktualizuje zmiany w konfiguracji:
+This let's us change configuration:
 
 `bundle update`
 
-Pozwoli odpalić lokalny serwer:
+And run local server, just to check if it is working:
 ```
 jekyll exec bundle serv
 ```
 
-Kod:
+Code:
 `gem 'jekyll-admin', group: :jekyll_plugins`
-dodany do gemfile:  pozwoli używać panelu administratora.
+added to gemfile:  let's me use my administrator mode.
 
-Layout zapisuje się w _layouts i właśnie stąd Jekyll czerpie szablony.
+Layout is saved in _layouts and that's the place from which jekyll takes templates/css stuff.
