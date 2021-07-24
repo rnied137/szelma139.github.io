@@ -1,38 +1,37 @@
 ---
-title: JQUERY czyli jak i po co ?
+title: JQUERY what, how, when ok stop..
 layout: post
 date: '2020-02-04 18:22:00 +0100'
 categories: js javascript app query
 ---
 
-Jquery - bibliotkea javascriptowa, która ułatwia wykorzystywanie selectorów. Skoro można łatwiej to po co się męczyć? No dobra ale jak to działa ? Czas się przyjrzeć.
+JQUERY - javascript library, well known for simplifying usage of selectors. If something can be done easier, why make it hard ? Ok but how it works, let's see.
 
-
-Normalne wybranie elementu po selectorze wygląda tak w czystym html:
+Selecting html DOM element can in typical js can be done like this.
 `let changer = document.querySelector(".changer");`
 
-Przykład uchwytu jednak tym razem w jquery:
-uchwyt - >  `$(element)`
-gdzie element to np. 
+Handler in jquery - >
+`$(element)`
+where element is:
 `".class"`
 `"#id"`
 `"h1"`
 
-Pełna składnia więc może wyglądać tak:
+Full syntax can look like this:
 
+
+Select:
 ```
-$('a') - wybiera wszystkie linki ze strony.
-$('.radek') - wybiera wszystkie selectory z klasą radek.
-$(document) - wybiera cale okno, tak też można 
+$('a') - every link element from website.
+$('.radek') - everything with 'radek' class.
+$(document) - whole document, ofc you can do that.
 ```
 
-Podpinać elementy do uchwytu można poprzez **html** oraz **css**. Pierwsze zmienia parametry zawartości selektora,
-drugi tak jak nazwa jego stylu czyli cssa. Istotnie mogą one ustawiać wartość parametru ale też pełnić rolę settera. Więc jest to 
-getter oraz setter. Jest to czysta analogia do starego sposobu czyli - **innerhtml**.
+Elements can be pinned to handler by **html** oraz **css**. First can change parameters of selector, second one it's style - css. And can be both setter and getter for pinned handler. And it is similiar to banned way of doing it, I mean well used in industry **innerhtml**. shenanigans.
 
-` var obraz = "url(img/" + cards[nr] + " + ");` -- parametr cards to tablica nazwych plików.
-`$('#c0').css('background-image, obraz);` -- parametr background-image ustaw na obraz (obraz jest stringiem)
+` var obraz = "url(img/" + cards[nr] + " + ");` -- parameter cards is an array of new files
+`$('#c0').css('background-image, obraz);` -- background-image set as 'obraz' string.
 `var opacity = $('#c').css('opacity')` - getter
 `var opacity = $('#c').css('opacity', '0.8')` - setter
 
-To by było na tyle.
+See ya'll.
