@@ -1,29 +1,28 @@
 ---
-title: Wskazniki i obsluga myszy [vnc]
+title: Pointers and mouse support [vnc]
 layout: post
 date: '2020-02-21 12:48:00 +0100'
 categories: vnc mysz obsluga c++ c
 ---
+So because it looks like I won't go far in c++ without pointers knowledge - especially without **new** magical word.
 
-Jako że wygląda na to że w c++ bardzo przydzadzą się wskaźniki - szczególnie te bez słówka **new** to moze opiszę ich działanie.
-Istnieją 4 rodzaje castowania (rzutowania) i istnieje sposób znany z c. Ten drugi a więc sposób z c to:
-`(double)zmienna` - Wykonuje castowanie zmiennej na typ double.
+There are 4 ways - at least for now, of casting variables, one well known from c. This c way is:
+`(double)variable` - casts variable to double type.
 
- Jednak istnieją też trzy ważne inne sposoby:  
- 
-  
-`reinterpret_cast` - konwersja wskaznika jednego typu na inny wskaznik 
 
  
-`QMouseEvent * e = reinterpret_cast<QEvent*>(event) - tutaj event byl typu **QEvent** i zostaje skonwertowany do **QMouseEvent**  
+But there are more:  
+`reinterpret_cast` - convert one pointer type to different
 
-`const_cast` - stała do zmiennej  
+ 
+`QMouseEvent * e = reinterpret_cast<QEvent*>(event) -in this case **QEvent** is converted to **QMouseEvent**  
 
-`static_cast`- jeden typ do innego ale obsluguje głównie typy proste.  
+`const_cast` - const to variable 
+
+`static_cast`- one type to other but only applies to generics.  
 
 
-
-No a tutaj tak właściwie dla siebie kod, rozpoznający obsługę myszy dla vnc w QT.
+And some vnc sssshenanigansss.
 
 ```
  switch(event->type()){
@@ -72,9 +71,9 @@ mouseEventHandler(newEvent->x(),newEvent->y(),newEvent->button());
 
 
 ```
-Dalej funkcja z wątku otrzymuje dane i przekazuje ją dalej do funkcji Send Pointer.
+Next thread function is getting date and passing it to sendPointer event.
 
 `SendPointerEvent(m_client,x, y,button_mask);`
 
 
-To by było na tyle.
+See y'all.
