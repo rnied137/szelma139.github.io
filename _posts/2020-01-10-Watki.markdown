@@ -1,13 +1,14 @@
 ---
-title: Watki w c++ i w QT
+title: Threads in c++/ QT
 layout: post
 date: '2019-01-10 17:27:00 +0100'
 categories: c thread QT
 ---
 
-Dobrze jest mieć gdzieś podgląd na to w jaki sposób prawidłowo dodawać wątki w c++ i w QT. Pod spodem w jaki sposób to zrobić PRAWIDŁOWO..
+It is always worth to have some kind of preview how to properly use Threads in c++/Qt. There are several ways of doing that, but which one is proper, probably one working.. But is it ?
 
-Na początek należy zdefiniować nową klasę, NIE zawiera ona elementu QThread i co więcej rozszerza ona interfejs wykorzystując dziedziczenie po QObject (nie qthread jak to zwykle sie robi) Następnie tworzę funkcję która przypisuje referencje dla obiekty typu wątek. 
+So first it is good to define new class, not containing QThread, and extending interface of QObject - normally class is extending QThread - like it is done in java.
+Next I am creating method expecting reference object to Thread.
 
 ```
 void classname::doSetup(QThread & thread)
@@ -16,16 +17,15 @@ connect(&thread, SIGNAL(started(),this, SLOT(doWork());
 }
 
 ```
-
-Ponieważ przypisany slot do elementu, który istnieje w zewnętrznej klasie odapli funkcje wykonującą robotę. Właśnie funkcje doWork(); Następnie tworzy się obiekt tej klasy w której było doSetup. I robi następująco:
+Method above will take thread object, prepare it and will start doing internal job after starting thread. Almost same as in java, but in signal-slotish way. Yes doWork does it's work. 
 ```
 QThread thread;
 MyObject object;
 object.doSetup(thread);
-object.moveToThread(&thread)   - tu referencja ważne
+object.moveToThread(&thread)   - reference to existing object
 thread.start();
 ```
-Wpis zaczerpnięty od Youtube  - VoidRealms, ponieważ szukanie po raz n-ty tego filmika mi się już znudziło. 
+Way of doing it stolen from Youtube user - VoidRealms.
 
 
-To by było na tyle.
+See ya'll.
